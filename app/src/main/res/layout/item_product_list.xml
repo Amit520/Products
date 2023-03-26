@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/dim_5"
+	app:cardCornerRadius="@dimen/dim_10"
+	app:cardElevation="@dimen/dim_10">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivProduct"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/purple_200"
+			android:minWidth="@dimen/dim_110"
+			android:minHeight="@dimen/dim_120"
+			android:scaleType="centerCrop"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+		<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/tvTitle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dim_10"
+			android:layout_marginTop="@dimen/dim_5"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_size_16"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivProduct"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="Title" />
+
+		<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/tvDescription"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dim_10"
+			android:layout_marginTop="@dimen/dim_5"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_size_16"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivProduct"
+			app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+			tools:text="Description" />
+
+		<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/tvPriceDiscount"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dim_10"
+			android:layout_marginTop="@dimen/dim_5"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_size_16"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivProduct"
+			app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+			tools:text="$259 -> 12.95% Discount" />
+
+		<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/tvRating"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="@dimen/dim_10"
+			android:layout_marginTop="@dimen/dim_5"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_size_16"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/ivProduct"
+			app:layout_constraintTop_toBottomOf="@+id/tvPriceDiscount"
+			tools:text="***** 3.5" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
